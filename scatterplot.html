@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Draggable scatterplot with motion trails</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <style type="text/css">
+        .circleSelected{
+            stroke:black;
+            stroke-width: 3px;
+        }
+        .circleUnselected{
+            stroke:black;
+            stroke-width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <svg height=500 width = 1100>
+        <g id="chart">
+        </g>
+        <text font-size="100" x="700" y="400" id="year" fill="rgb(128,128,128)">1800</text>
+        <text font-size="80"  x="100" y="100" id="country" fill="rgb(128,128,128)"></text>
+    </svg>
+    <br/>
+    <form method="post">
+        <span id="min-time">1800</span>
+        <input type="range" name="points" id="range"
+               style="width:900px" min="0" max="208" step="1" value="0"/>
+        <span id="max-time">2008</span>
+    </form>
+    <script type="text/javascript" src="scatterplot.js"></script>
+</body>
+</html>
